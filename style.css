@@ -1,0 +1,457 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+a {
+    text-decoration: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span.p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* header */
+
+
+.header {
+    background-color: rgba(0,0,0,.8);
+}
+
+
+.header-left {
+    width: 35%;
+}
+
+.logo {}
+
+.logo img {
+    width: 250px;
+}
+
+.header-right {
+    width: 65%;
+}
+
+.menu-area {}
+
+.menu-area ul {
+    text-align: right;
+    list-style-type: none;
+    z-index: 999;
+}
+
+.menu-area ul li {
+    display: inline-block;
+    margin-left: -4px;
+}
+
+.menu-area ul li a {
+    display: inline-block;
+    padding: 20px;
+    color: #fff;
+    font-size: 14px;
+    transition: .5s;
+    position: relative;
+
+}
+
+.menu-area ul li a.line::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #a17024;
+    transition: .5s;
+    transform: scaleX(0);
+}
+
+.menu-area ul li a.line:hover::after {
+    transform: scaleX(1);
+
+
+}
+
+
+.menu-area ul li a:hover {
+    color: #a17024;
+}
+
+/* DROPDOWN */
+
+.menu-area ul li {
+    position: relative;
+}
+
+.menu-area ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: top center;
+
+}
+
+.menu-area ul li ul li {
+    display: block;
+    /* border-bottom: 1px solid #000; */
+    margin-left: 0;
+
+}
+
+.menu-area ul li ul li a {
+    display: block;
+    color: #000;
+
+
+}
+
+
+.menu-area ul li:hover ul {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleX(1);
+    transition: .5s;
+
+}
+
+.menu-area ul li ul li a:hover {
+    background-color: #c0bfc0;
+}
+
+/* header end */
+
+.banner {
+    background-image: url(images/ia_200000019.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 180px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(49, 46, 44, .7);
+    z-index: -1;
+}
+
+.banner-heading {}
+
+.banner-heading h1 {
+    font-size: 70px;
+    color: #fff;
+}
+
+.banner-heading h2 {
+    font-size: 27px;
+    padding: 35px;
+    color: #fff;
+    position: relative;
+    font-weight: 500;
+}
+
+.banner-heading h2::before {
+    content: "";
+    position: absolute;
+    top: 51px;
+    left: 310px;
+    width: 85px;
+    height: 2px;
+    background-color: #fff;
+
+}
+
+.banner-heading h2::after {
+    content: "";
+    position: absolute;
+    top: 51px;
+    right: 310px;
+    width: 85px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: #c69453;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    transition: .5s;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #c69453;
+    cursor: pointer;
+}
+
+/* banner end */
+
+.services {
+    padding: 100px;
+}
+
+.service-area {}
+
+.service-item {
+    width: 23%;
+    margin-right: 2%;
+    background-color: #fff;
+    /* box-shadow: 3px 4px 20px 0 rgb(113, 213, 226); */
+    padding: 23px;
+    box-sizing: border-box;
+}
+
+.service-item img {
+    transform: rotateY(0);
+    border-radius: 50%;
+    transition: .5s;
+
+}
+
+.service-area:hover img {
+    transform: rotateY(360deg);
+    cursor: pointer;
+}
+
+.service-item h3 {
+    font-size: 17px;
+    font-weight: 400;
+    color: rgb(42, 47, 52);
+    margin-top: 15px;
+}
+
+.service-item p {
+    margin: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #8f98b0;
+}
+
+.btnnnt {
+    border-radius: 10px;
+    transition: .5s;
+    cursor: pointer;
+    transform: translateY(0);
+}
+
+.btnnnt:hover {
+    background-color: black !important;
+    color: #fff !important;
+    transform: translateY(10px);
+}
+
+.service-area:hover .service-item img {
+    background-color: #a17024;
+}
+
+.service-item:hover {
+    background-color: #e1dedd;
+}
+
+.service-area:hover .btn {
+    background-color: rgb(245, 239, 239);
+    color: #a17024;
+}
+
+
+/* service end */
+
+.about {}
+
+.about-left {
+    width: 45%;
+    margin-right: 5%;
+}
+
+.about-right {
+    width: 50%;
+}
+
+.about-right h1 {
+    font-size: 40px;
+}
+
+.about-right span {
+    color: #c69453;
+}
+
+.about-right p {
+    font-size: 14px;
+    padding: 21px 0;
+    width: 75%;
+
+}
+
+.Adress {
+    margin-bottom: 15px;
+}
+
+.bont {
+    border-radius: 0;
+    background-color: #000;
+    color: ffff;
+    transition: .5s;
+}
+
+.bont:hover {
+    background-color: #c69453;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* about end */
+
+.contact-form {
+    margin-top: 100px;
+}
+
+.contact-left {
+    width: 65%;
+}
+
+.message {
+    margin-right: 50px;
+}
+
+.form {}
+
+.form h2 {
+    font-size: 40px;
+    color: #212529;
+}
+
+.form h5 {
+    margin: 35px 0;
+    color: #b2b1b0;
+    width: 80%;
+}
+
+.name {
+    width: 80%;
+    border: 1px solid rgba(117, 117, 117, .2);
+    padding: 15px;
+}
+
+
+
+.email {
+    width: 80%;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid rgba(117, 117, 117, .2);
+}
+
+.number {
+    width: 80%;
+    padding: 15px;
+    border: 1px solid rgba(117, 117, 117, .2);
+}
+
+.message {
+    margin-top: 10px;
+    width: 80%;
+    padding: 15px;
+    border: 1px solid rgba(117, 117, 117, .2);
+    font-size: 15px;
+}
+
+.image {
+    width: 35%;
+}
+
+.btnn {
+    /* background-color: #c69453; */
+    border-radius: 0;
+    margin-top: 10px;
+}
+
+.btnn:hover {
+    background-color: #c69453;
+    color: #fff;
+}
+
+
+/* footer start */
+
+.footer {
+    background-color: #6d6d6d;
+    padding: 40px;
+
+}
+
+.footer-pera {
+    width: 50%;
+}
+
+.footer-pera p {
+    color: #dadcdd;
+    font-size: 15px;
+}
+
+.footer-social {
+    width: 50%;
+}
+
+.footer-social ul {
+    text-align: right;
+}
+
+.footer-social ul li {
+    display: inline-block;
+    margin-left: -4px;
+}
+
+.footer-social ul li a {
+    display: inline-block;
+    color: #dadcdd;
+    padding: 0 20px;
+}
